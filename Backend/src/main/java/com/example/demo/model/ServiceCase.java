@@ -39,4 +39,10 @@ public class ServiceCase {
     private BigDecimal serviceAmount;
 
     private LocalDateTime createdAt;
+
+    private String attachmentName;
+
+    @Lob
+    @Column(columnDefinition = "TEXT")
+    private String attachmentDataUrl;
 }

@@ -73,8 +73,16 @@ export default function WorkerDashboard() {
               {c.status}
             </span>
           </div>
-          <p className="text-sm text-gray-600 mb-1"><strong>Service:</strong> {c.description}</p>
-          <p className="text-sm text-gray-600 mb-3"><strong>Customer:</strong> {c.customerPhone}</p>
+          <p className="text-sm text-gray-600 mb-1"><strong>Issue:</strong> {c.description}</p>
+          <p className="text-sm text-gray-600 mb-1"><strong>Customer:</strong> {c.customerPhone}</p>
+          {c.attachmentName && <p className="text-xs text-gray-500 mb-1">Attachment: {c.attachmentName}</p>}
+          {c.attachmentDataUrl && (
+            <img
+              src={c.attachmentDataUrl}
+              alt="Issue attachment"
+              className="w-full h-32 object-cover rounded-lg border mb-3"
+            />
+          )}
 
           <div className="flex gap-2">
             {c.status === "ASSIGNED" && (

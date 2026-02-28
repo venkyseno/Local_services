@@ -26,6 +26,8 @@ public class ServiceCaseService {
                 .description(request.getDescription())
                 .customerPhone(request.getCustomerPhone())
                 .assistedByUserId(request.getAssistedByUserId())
+                .attachmentName(request.getAttachmentName())
+                .attachmentDataUrl(request.getAttachmentDataUrl())
                 .status(CaseStatus.CREATED)
                 .createdAt(LocalDateTime.now())
                 .build();

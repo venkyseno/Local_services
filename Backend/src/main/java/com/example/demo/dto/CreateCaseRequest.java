@@ -11,4 +11,6 @@ public class CreateCaseRequest {
     private String description;
     private String customerPhone;
     private Long assistedByUserId;
+    private String attachmentName;
+    private String attachmentDataUrl;
 }

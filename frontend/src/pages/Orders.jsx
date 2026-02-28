@@ -69,6 +69,16 @@ export default function Orders() {
           {order.serviceAmount && (
             <p className="text-sm text-gray-600 mt-2">Amount: ₹{order.serviceAmount}</p>
           )}
+          {order.attachmentName && (
+            <p className="text-xs text-gray-500 mt-2">Attachment: {order.attachmentName}</p>
+          )}
+          {order.attachmentDataUrl && (
+            <img
+              src={order.attachmentDataUrl}
+              alt="Issue attachment"
+              className="mt-2 w-full h-36 object-cover rounded-lg border"
+            />
+          )}
         </div>
       ))}
     </div>
